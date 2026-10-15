@@ -1,0 +1,30 @@
+export const tokens = {
+  colors: {
+    bg: '#FFFFFF',
+    ivory: '#F6F5F2',
+    navy: '#1F3554',
+    navyLight: '#2A456C',
+    navyDark: '#142338',
+    text: '#1F3554',
+    subtext: '#596575',
+    border: '#E5E8EB',
+    accent: '#D66A32',
+    accentHover: '#BD5B27',
+    accentSubtle: '#FDF4EE',
+    action: '#C2561E',
+    actionHover: '#A84614',
+  },
+  typography: {
+    fontSans: 'var(--font-inter), sans-serif',
+    fontHeading: 'var(--font-inter), sans-serif',
+  },
+  radius: {
+    card: 'rounded-2xl',
+    button: 'rounded-xl',
+    input: 'rounded-xl',
+    badge: 'rounded-lg',
+  },
+  container: 'mx-auto max-w-6xl px-6',
+  sectionSpacing: 'py-16 lg:py-24',
+  sectionSpacingCompact: 'py-12 lg:py-16',
+} as const;

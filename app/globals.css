@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-manrope: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #1F3554;
+    font-family: var(--font-inter);
+    overflow-x: hidden;
+  }
+
+  /* Focus visible accessibility styling */
+  :focus-visible {
+    outline: 2px solid #C2561E;
+    outline-offset: 2px;
+  }
+
+  /* Custom selection color matching brand */
+  ::selection {
+    background-color: #FDF4EE;
+    color: #C2561E;
+  }
+}
+
+@layer utilities {
+  /* Subtle glassmorphism backdrop */
+  .glass-nav {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Text balance utility */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
