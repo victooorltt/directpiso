@@ -464,18 +464,14 @@ function CatalogInner() {
 
         {/* 4. RESULTADOS & HEADER DE LISTADO */}
         <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
+          <div>
             <h3 className="font-heading font-extrabold text-xl text-navy">
               Resultados disponibles
             </h3>
-            <span className="inline-flex items-center justify-center text-xs font-bold bg-accent-subtle text-action px-2.5 py-0.5 rounded-full border border-accent/20">
-              {filteredProperties.length}{' '}
-              {filteredProperties.length === 1 ? 'inmueble' : 'inmuebles'}
-            </span>
           </div>
 
           <p className="text-xs text-subtext">
-            Mostrando {filteredProperties.length} de {PROPERTIES.length} propiedades verificadas
+            Mostrando {filteredProperties.length} de {PROPERTIES.length} propiedades
           </p>
         </div>
 
@@ -661,7 +657,7 @@ function CatalogInner() {
                         href={`/inmuebles/${property.slug}/`}
                         className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold text-navy group-hover:text-white bg-ivory group-hover:bg-action border border-borderline group-hover:border-action transition-all duration-150"
                       >
-                        <span>Ver ficha y fotos reales</span>
+                        <span>Ver más</span>
                         <ArrowRight
                           className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                           aria-hidden="true"
@@ -683,7 +679,7 @@ function CatalogInner() {
               No se encontraron inmuebles con estos filtros
             </h4>
             <p className="text-sm text-subtext mb-6 leading-relaxed">
-              Actualmente el catálogo dispone de 5 propiedades verificadas. Prueba a relajar los
+              Actualmente el catálogo dispone de 5 propiedades. Prueba a relajar los
               criterios de precio, municipio o superficie para ver las opciones disponibles.
             </p>
             <button
