@@ -139,7 +139,7 @@ export default function PageHero({
                     return (
                       <div
                         key={idx}
-                        className="flex items-center justify-center sm:justify-start gap-2 whitespace-nowrap bg-white/50 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none py-1.5 px-3 sm:p-0 rounded-lg sm:rounded-none border border-white/60 sm:border-0 shadow-xs sm:shadow-none"
+                        className="flex items-center justify-center sm:justify-start gap-2 whitespace-nowrap py-1 sm:p-0"
                       >
                         <Icon className="w-4 h-4 text-action shrink-0" aria-hidden="true" />
                         <span>{item.label}</span>
@@ -175,16 +175,16 @@ export default function PageHero({
         {overlay ? (
           overlay
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/25" />
+          <div className="absolute inset-0 bg-white/70 sm:bg-transparent sm:bg-gradient-to-b sm:from-white/20 sm:via-transparent sm:to-white/25" />
         )}
       </div>
 
       {/* Centered content directly over image - No artificial eyebrows or badges */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-12 lg:py-16 text-center w-full">
         <div className="relative max-w-3xl mx-auto">
-          {/* Protección 100% difuminada y orgánica con centro blanco nítido y sin líneas de caja */}
+          {/* Protección 100% difuminada y orgánica: activa en desktop/tablet, oculta en mobile */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] max-w-4xl h-[165%] -z-10 bg-[radial-gradient(ellipse_closest-side_at_center,_rgba(255,255,255,0.93)_0%,_rgba(255,255,255,0.88)_38%,_rgba(255,255,255,0.50)_65%,_rgba(255,255,255,0.12)_85%,_transparent_100%)] blur-lg pointer-events-none"
+            className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] max-w-4xl h-[165%] -z-10 bg-[radial-gradient(ellipse_closest-side_at_center,_rgba(255,255,255,0.93)_0%,_rgba(255,255,255,0.88)_38%,_rgba(255,255,255,0.50)_65%,_rgba(255,255,255,0.12)_85%,_transparent_100%)] blur-lg pointer-events-none"
             aria-hidden="true"
           />
 
@@ -221,7 +221,7 @@ export default function PageHero({
             </div>
           )}
 
-          {/* Fila de beneficios centrada: 2 y 2 en mobile, 1 línea en desktop */}
+          {/* Fila de beneficios centrada: limpia y sin cajas en mobile */}
           {effectiveBenefits && effectiveBenefits.length > 0 && (
             <div className="mt-8 sm:mt-10 pt-6 border-t border-navy/15 max-w-2xl mx-auto">
               <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-nowrap sm:items-center sm:justify-center sm:gap-8 lg:gap-10 text-xs sm:text-sm font-semibold text-navy">
@@ -230,7 +230,7 @@ export default function PageHero({
                   return (
                     <div
                       key={idx}
-                      className="flex items-center justify-center gap-2 whitespace-nowrap bg-white/50 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none py-1.5 px-3 sm:p-0 rounded-lg sm:rounded-none border border-white/60 sm:border-0 shadow-xs sm:shadow-none"
+                      className="flex items-center justify-center gap-2 whitespace-nowrap py-1 sm:p-0"
                     >
                       <Icon className="w-4 h-4 text-action shrink-0" aria-hidden="true" />
                       <span>{item.label}</span>

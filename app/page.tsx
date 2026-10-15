@@ -80,20 +80,20 @@ export default function HomePage() {
         showBenefits
       />
 
-      {/* Buscador integrado limpio justo debajo sin invadir los textos */}
-      <section className="relative z-20 -mt-8 sm:-mt-10 lg:-mt-12 max-w-5xl mx-auto px-4 sm:px-6 mb-8 lg:mb-12">
+      {/* Buscador integrado amplio y prominente justo debajo del hero */}
+      <section className="relative z-20 -mt-8 sm:-mt-10 lg:-mt-12 max-w-6xl w-full mx-auto px-3 sm:px-6 mb-10 lg:mb-14">
         <form
           action="/inmuebles/"
           method="GET"
-          className="bg-white rounded-2xl p-4 sm:p-5 shadow-xl border border-borderline"
+          className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-shadow border border-borderline"
           role="search"
           aria-label="Buscar inmuebles en Asturias"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 items-end">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 items-end">
             <div>
               <label
                 htmlFor="hero-operacion"
-                className="block text-xs font-semibold text-navy mb-1.5"
+                className="block text-xs sm:text-sm font-bold text-navy mb-1.5"
               >
                 Operación
               </label>
@@ -102,7 +102,7 @@ export default function HomePage() {
                   id="hero-operacion"
                   name="operacion"
                   defaultValue=""
-                  className="w-full bg-ivory text-navy border border-borderline rounded-xl px-3.5 py-3 text-sm font-medium focus:ring-2 focus:ring-action focus:outline-none appearance-none cursor-pointer"
+                  className="w-full bg-ivory text-navy border border-borderline rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium focus:ring-2 focus:ring-action focus:outline-none appearance-none cursor-pointer"
                 >
                   <option value="">Todas</option>
                   <option value="Comprar">Comprar</option>
@@ -118,7 +118,7 @@ export default function HomePage() {
             <div>
               <label
                 htmlFor="hero-municipio"
-                className="block text-xs font-semibold text-navy mb-1.5"
+                className="block text-xs sm:text-sm font-bold text-navy mb-1.5"
               >
                 Municipio
               </label>
@@ -127,7 +127,7 @@ export default function HomePage() {
                   id="hero-municipio"
                   name="municipio"
                   defaultValue=""
-                  className="w-full bg-ivory text-navy border border-borderline rounded-xl px-3.5 py-3 text-sm font-medium focus:ring-2 focus:ring-action focus:outline-none appearance-none cursor-pointer"
+                  className="w-full bg-ivory text-navy border border-borderline rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium focus:ring-2 focus:ring-action focus:outline-none appearance-none cursor-pointer"
                 >
                   <option value="">Todos los concejos</option>
                   <option value="Oviedo">Oviedo</option>
@@ -145,7 +145,7 @@ export default function HomePage() {
             <div>
               <label
                 htmlFor="hero-tipo"
-                className="block text-xs font-semibold text-navy mb-1.5"
+                className="block text-xs sm:text-sm font-bold text-navy mb-1.5"
               >
                 Tipo de inmueble
               </label>
@@ -154,7 +154,7 @@ export default function HomePage() {
                   id="hero-tipo"
                   name="tipo"
                   defaultValue=""
-                  className="w-full bg-ivory text-navy border border-borderline rounded-xl px-3.5 py-3 text-sm font-medium focus:ring-2 focus:ring-action focus:outline-none appearance-none cursor-pointer"
+                  className="w-full bg-ivory text-navy border border-borderline rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium focus:ring-2 focus:ring-action focus:outline-none appearance-none cursor-pointer"
                 >
                   <option value="">Todos los tipos</option>
                   <option value="Casa/Chalet">Casa / Chalet</option>
@@ -172,7 +172,7 @@ export default function HomePage() {
             <div>
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-action hover:bg-action-hover text-white text-sm font-semibold rounded-xl transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-action cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-action hover:bg-action-hover text-white text-sm sm:text-base font-bold rounded-xl transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-action cursor-pointer"
               >
                 <Search className="w-4 h-4" aria-hidden="true" />
                 <span>Buscar inmuebles</span>
