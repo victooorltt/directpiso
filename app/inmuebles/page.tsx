@@ -229,9 +229,16 @@ function CatalogInner() {
       <PageHero
         variant="gradient"
         imageSrc="/assets/editorial/hero-inmuebles.webp"
-        imageAlt="Inmuebles en venta y alquiler en Asturias"
+        imageAlt="Salón luminoso de vivienda en Asturias con vistas a la montaña - Directpiso"
+        imagePosition="object-center lg:object-[center_right]"
         title="Inmuebles en venta y alquiler en Asturias"
         subtitle="Encuentra una propiedad a tu medida. Descubre las propiedades anunciadas por Directpiso y utiliza los filtros para encontrar lo que buscas."
+        overlay={
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white/70 lg:bg-gradient-to-r lg:from-white/85 lg:from-5% lg:via-white/40 lg:via-40% lg:to-transparent lg:to-72%"
+            aria-hidden="true"
+          />
+        }
       />
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10 lg:py-14">
