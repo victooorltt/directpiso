@@ -17,6 +17,7 @@ export interface PageHeroProps {
   variant?: 'centered' | 'gradient' | 'overlay' | 'centered-dark' | 'split-light';
   title: React.ReactNode;
   subtitle?: React.ReactNode;
+  subtitleClassName?: string;
   imageSrc?: string;
   bgImage?: string; // alias for imageSrc
   imageAlt?: string;
@@ -45,6 +46,7 @@ export default function PageHero({
   variant = 'centered',
   title,
   subtitle,
+  subtitleClassName,
   imageSrc,
   bgImage,
   imageAlt = 'Directpiso Inmobiliaria en Oviedo y Asturias',
@@ -96,9 +98,14 @@ export default function PageHero({
             </h1>
 
             {subtitle && (
-              <p className="mt-5 text-lg sm:text-xl text-subtext leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
+              <div
+                className={
+                  subtitleClassName ||
+                  'mt-5 text-lg sm:text-xl text-subtext leading-relaxed font-normal max-w-xl mx-auto lg:mx-0'
+                }
+              >
                 {subtitle}
-              </p>
+              </div>
             )}
 
             {(primaryCta || secondaryCta) && (

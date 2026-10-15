@@ -232,12 +232,21 @@ function CatalogInner() {
         imageAlt="Salón luminoso de vivienda en Asturias con vistas a la montaña - Directpiso"
         imagePosition="object-center lg:object-[center_right]"
         title="Inmuebles en venta y alquiler en Asturias"
-        subtitle="Encuentra una propiedad a tu medida. Descubre las propiedades anunciadas por Directpiso y utiliza los filtros para encontrar lo que buscas."
+        subtitle="Viviendas seleccionadas en venta y alquiler con asesoramiento experto en Oviedo y toda Asturias."
+        subtitleClassName="mt-5 text-xl sm:text-2xl text-navy font-medium leading-relaxed max-w-lg mx-auto lg:mx-0"
         overlay={
-          <div
-            className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white/70 lg:bg-gradient-to-r lg:from-white/85 lg:from-5% lg:via-white/40 lg:via-40% lg:to-transparent lg:to-72%"
-            aria-hidden="true"
-          />
+          <>
+            {/* Degradado lateral suave para proteger el texto sin blanquear la fotografía */}
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/55 to-white/70 lg:bg-gradient-to-r lg:from-white/95 lg:from-0% lg:via-white/80 lg:via-28% lg:via-white/30 lg:via-48% lg:to-transparent lg:to-68%"
+              aria-hidden="true"
+            />
+            {/* Suave resplandor orgánico difuminado detrás del bloque de texto para máxima legibilidad sin líneas de caja */}
+            <div
+              className="hidden lg:block absolute -left-12 top-[12%] w-[48%] h-[76%] -z-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.75)_0%,_rgba(255,255,255,0.25)_55%,_transparent_100%)] blur-2xl pointer-events-none"
+              aria-hidden="true"
+            />
+          </>
         }
       />
 
