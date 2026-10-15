@@ -84,7 +84,7 @@ export default function PageHero({
             overlay
           ) : (
             <div
-              className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/55 to-white/70 lg:bg-gradient-to-r lg:from-white/95 lg:from-10% lg:via-white/80 lg:via-38% lg:to-transparent lg:to-75%"
+              className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/25 lg:bg-gradient-to-r lg:from-white/95 lg:from-10% lg:via-white/80 lg:via-38% lg:to-transparent lg:to-75%"
               aria-hidden="true"
             />
           )}
@@ -92,7 +92,13 @@ export default function PageHero({
 
         {/* Content: centered on mobile, left-aligned on desktop */}
         <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 lg:py-20 w-full">
-          <div className="max-w-xl lg:max-w-2xl mx-auto text-center lg:mx-0 lg:text-left">
+          <div className="relative max-w-xl lg:max-w-2xl mx-auto text-center lg:mx-0 lg:text-left">
+            {/* Mancha difuminada orgánica activa en mobile para los heros que no tienen mancha en desktop */}
+            <div
+              className="lg:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] max-w-2xl h-[165%] -z-10 bg-[radial-gradient(ellipse_closest-side_at_center,_rgba(255,255,255,0.93)_0%,_rgba(255,255,255,0.88)_38%,_rgba(255,255,255,0.50)_65%,_rgba(255,255,255,0.12)_85%,_transparent_100%)] blur-lg pointer-events-none"
+              aria-hidden="true"
+            />
+
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-navy leading-[1.12]">
               {title}
             </h1>
@@ -175,16 +181,16 @@ export default function PageHero({
         {overlay ? (
           overlay
         ) : (
-          <div className="absolute inset-0 bg-white/70 sm:bg-transparent sm:bg-gradient-to-b sm:from-white/20 sm:via-transparent sm:to-white/25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/25" />
         )}
       </div>
 
       {/* Centered content directly over image - No artificial eyebrows or badges */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-12 lg:py-16 text-center w-full">
         <div className="relative max-w-3xl mx-auto">
-          {/* Protección 100% difuminada y orgánica: activa en desktop/tablet, oculta en mobile */}
+          {/* Protección 100% difuminada y orgánica con centro blanco nítido y sin líneas de caja */}
           <div
-            className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] max-w-4xl h-[165%] -z-10 bg-[radial-gradient(ellipse_closest-side_at_center,_rgba(255,255,255,0.93)_0%,_rgba(255,255,255,0.88)_38%,_rgba(255,255,255,0.50)_65%,_rgba(255,255,255,0.12)_85%,_transparent_100%)] blur-lg pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] max-w-4xl h-[165%] -z-10 bg-[radial-gradient(ellipse_closest-side_at_center,_rgba(255,255,255,0.93)_0%,_rgba(255,255,255,0.88)_38%,_rgba(255,255,255,0.50)_65%,_rgba(255,255,255,0.12)_85%,_transparent_100%)] blur-lg pointer-events-none"
             aria-hidden="true"
           />
 

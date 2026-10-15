@@ -238,7 +238,7 @@ function CatalogInner() {
           <>
             {/* Degradado lateral suave para proteger el texto sin blanquear la fotografía */}
             <div
-              className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/55 to-white/70 lg:bg-gradient-to-r lg:from-white/95 lg:from-0% lg:via-white/80 lg:via-28% lg:via-white/30 lg:via-48% lg:to-transparent lg:to-68%"
+              className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/25 lg:bg-gradient-to-r lg:from-white/95 lg:from-0% lg:via-white/80 lg:via-28% lg:via-white/30 lg:via-48% lg:to-transparent lg:to-68%"
               aria-hidden="true"
             />
             {/* Suave resplandor orgánico difuminado detrás del bloque de texto para máxima legibilidad sin líneas de caja */}
